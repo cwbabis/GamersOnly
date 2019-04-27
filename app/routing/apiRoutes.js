@@ -1,4 +1,4 @@
-var gamersData = require("../data/gamers");
+var gamersData = require("../data/gamerData");
 
 module.exports = function (app) {
 

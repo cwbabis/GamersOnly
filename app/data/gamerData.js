@@ -1,4 +1,4 @@
-var profileArray = [
+var gamerProfileArray = [
     {
       "userName": "GamerGrill",
       "favoriteGame": "Call of Duty",
@@ -6,4 +6,4 @@ var profileArray = [
       "scores": [5,5,5,5,5,5,5,5,5,5]
     }];
 
-    module.exports = profileArray;
+    module.exports = gamerProfileArray;
