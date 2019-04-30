@@ -1,159 +1,275 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Survey</title>
-
-    <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>GamersOnly</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.0.js"
+        integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
 
     <!-- Chosen -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="assets/css/surveyStyle.css" />
+
 </head>
 
 <body>
-    <div style="background:#6441a4" class="container">
-        <h1>Gamer Survey</h1>
+    <div class="container">
+        <p>
+            <h1 id="survey-header-text">Survey Questions</h1>
+        </p>
         <div class="wrapper">
-            <h4>Name</h4>
-            <input type="text" id="userName" class="form-control" placeholder="" required>
+            <h4 style="color:#E25D30">Gamer Name</h4>
+            <input type="text" id="user-name" class="form-control" placeholder="Screen Name" required>
 
-            <h4>Your IRL Name</h4>
-            <input type="text" id="irlName" class="form-control" placeholder="" required>
+            <h4 style="color:#50C0EE">Your IRL Name</h4>
+            <input type="text" id="irl-name" class="form-control" placeholder="IRL Name" required>
 
-            <h4>Photo</h4>
-            <input type="text" id="userPhoto" class="form-control" placeholder="" required>
+            <h4 style="color:#E25D30">Link to your Photo Image</h4>
+            <input type="text" id="user-photo" class="form-control" placeholder="https://" required>
+            <hr>
 
-            <h4><strong>Question 1</strong></h4>
-            <h4>q1?</h4>
-            <select id="q1">
+            <h3 style="color:#50C0EE"><strong>Question 1</strong></h3>
+            <h4>You spend every waking moment playing video games.</h4>
+            <select class="chosen-select" id="q1">
                 <option value=""></option>
-                <option value="1">1</option>
+                <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="5">5 (Strongly Agree)</option>
             </select>
 
-            <h4><strong>Question 2</strong></h4>
-            <h4>q2?</h4>
-            <select id="q2">
+            <h3 style="color:#E25D30"><strong>Question 2</strong></h3>
+            <h4>How many games have you played?</h4>
+            <select class="chosen-select" id="q2">
                 <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1">None</option>
+                <option value="2">Like 2 or 3</option>
+                <option value="3">10</option>
+                <option value="4">25+</option>
+                <option value="5">Too many too count</option>
             </select>
 
-            <h4><strong>Question 3</strong></h4>
-            <h4>q3?</h4>
-            <select id="q3">
+            <h3 style="color:#50C0EE"><strong>Question 3</strong></h3>
+            <h4>What platform do you play on?</h4>
+            <select class="chosen-select" id="q3">
                 <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1">Phone</option>
+                <option value="2">Tablet</option>
+                <option value="3">Console</option>
+                <option value="4">PC Gamer 4 Lyfe</option>
+                <option value="5">All of the above</option>
             </select>
 
-            <h4><strong>Question 4</strong></h4>
-            <h4>q4?</h4>
-            <select id="q4">
+            <h3 style="color:#E25D30"><strong>Question 4</strong></h3>
+            <h4>What do you do all day?</h4>
+            <select class="chosen-select" id="q4">
                 <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1">Work</option>
+                <option value="2">Workout</option>
+                <option value="3">Watch YouTube</option>
+                <option value="4">Watch Anime</option>
+                <option value="5">Game </option>
             </select>
 
-            <h4><strong>Question 5</strong></h4>
-            <h4>q5?</h4>
-            <select id="q5">
+            <h3 style="color:#50C0EE"><strong>Question 5</strong></h3>
+            <h4>When did you start playing games?</h4>
+            <select class="chosen-select" id="q5">
                 <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1">Yesterday</option>
+                <option value="2">1 year ago</option>
+                <option value="3">3 years ago</option>
+                <option value="4">Games?</option>
+                <option value="5">In the womb</option>
             </select>
 
-            <h4><strong>Question 6</strong></h4>
-            <h4>q6?</h4>
-            <select id="q6">
+            <h3 style="color:#E25D30"><strong>Question 6</strong></h3>
+            <h4>You just won a game, how do you celebrate?</h4>
+            <select class="chosen-select" id="q6">
                 <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1">"I must be a video game master!"</option>
+                <option value="2">Congratulate everyone and move on.</option>
+                <option value="3">Brag about it.</option>
+                <option value="4">Tell the other team how much they sucked.</option>
+                <option value="5">Don't say anything. You can't lose focus.</option>
             </select>
 
-            <h4><strong>Question 7</strong></h4>
-            <h4>q7?</h4>
-            <select id="q7">
+            <h3 style="color:#50C0EE"><strong>Question 7</strong></h3>
+            <h4>You find someone hacking the game, what do you do?</h4>
+            <select class="chosen-select" id="q7">
                 <option value=""></option>
-                <option value="1">1)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1">Do nothing.</option>
+                <option value="2">Call your team over to ambush him.</option>
+                <option value="3">Rant about him on the chat for the next couple of games.</option>
+                <option value="4">Hunt him, kill him, and make him pay.</option>
+                <option value="5">Hack him</option>
             </select>
 
-            <h4><strong>Question 8</strong></h4>
-            <h4>q8?</h4>
-            <select id="q8">
+            <h3 style="color:#E25D30"><strong>Question 8</strong></h3>
+            <h4>Do you use mods?</h4>
+            <select class="chosen-select" id="q8">
                 <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1">Mod?</option>
+                <option value="2">Yes, but I'm the only one allowed to use them.</option>
+                <option value="3">If they improve my plans, then yes</option>
+                <option value="4">I don't need it, I'll still win.</option>
+                <option value="5">Only if it's required.</option>
             </select>
 
-            <h4><strong>Question 9</strong></h4>
-            <h4>q9?</h4>
-            <select id="q9">
+            <h3 style="color:#50C0EE"><strong>Question 9</strong></h3>
+            <h4>What is your typical snack while gaming?</h4>
+            <select class="chosen-select" id="q9">
                 <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1">Coffee</option>
+                <option value="2">Nothing</option>
+                <option value="3">Red Bull</option>
+                <option value="4">Water from a canteen, like they did in the war</option>
+                <option value="5">Mountain Dew & Doritos</option>
             </select>
 
-            <h4><strong>Question 10</strong></h4>
-            <h4>q10?</h4>
-            <select id="q10">
+            <h3 style="color:#E25D30"><strong>Question 10</strong></h3>
+            <h4>How many times have you died in a video game? </h4>
+            <select class="chosen-select" id="q10">
                 <option value=""></option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+                <option value="1">Never</option>
+                <option value="2">Once</option>
+                <option value="3">50 times</option>
+                <option value="4">500 times</option>
+                <option value="5">Over 1000 times</option>
             </select>
+            <br>
+            <br>
 
-            <button type="submit" class="btn btn-success btn-block" id="submit"><i class="fa fa-heart"
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-heart"
                     aria-hidden="true"></i>
-                Level Up</button>
+                Submit Questions</button>
+            <hr>
+
             <footer class="footer">
                 <div class="container">
-
-                    <p><a style="color:#3eff1f" href="/api/gamers">API Gamers Link</a> | <a style="color:#3eff1f"
-                            href="https://github.com/cwbabis/GamersOnly" target="_blank">GitHub
+                    <p style="color:#50C0EE"><a style="color:#E25D30" href="/api/gamers">API Gamers List</a> |
+                        <a style="color:#E25D30" href="https://github.com/cwbabis/GamersOnly" target="_blank">GitHub
                             Repo</a></p>
                 </div>
             </footer>
         </div>
     </div>
+
+    <div id="results-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h2 class="modal-title"><strong>GamersOnly Match</strong></h2>
+                    <br>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h2 id="match-alias"></h2>
+                    <h2 style="float: left"></h2>
+                    <h2 id="match-name"></h2>
+                    <img id="match-img" style="align-content: center" src="userPhoto" alt="" width="300px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // Chosen CSS
+        var config = {
+            ".chosen-select": {},
+            ".chosen-select-deselect": {
+                allow_single_deselect: true
+            },
+            ".chosen-select-no-single": {
+                disable_search_threshold: 10
+            },
+            ".chosen-select-no-results": {
+                no_results_text: "Oops, nothing found!"
+            },
+            ".chosen-select-width": {
+                width: "95%"
+            }
+        };
+        for (var selector in config) {
+            $(selector).chosen(config[selector]);
+        }
+
+        // Capture the form inputs
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+
+            // Form validation
+            function validateForm() {
+                var isValid = true;
+                $(".form-control").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+
+                $(".chosen-select").each(function () {
+                    if ($(this).val() === "") {
+                        isValid = false;
+                    }
+                });
+                return isValid;
+            }
+            if (validateForm()) {
+                var userData = {
+                    userName: $("#user-name").val(),
+                    irlName: $("#irl-name").val(),
+                    userPhoto: $("#user-photo").val(),
+                    scores: [
+                        $("#q1").val(),
+                        $("#q2").val(),
+                        $("#q3").val(),
+                        $("#q4").val(),
+                        $("#q5").val(),
+                        $("#q6").val(),
+                        $("#q7").val(),
+                        $("#q8").val(),
+                        $("#q9").val(),
+                        $("#q10").val()
+                    ]
+                };
+
+                $.post("/api/gamers", userData, function (data) {
+                    if (data.length > 1) {
+                        var index = Math.floor(Math.random() * data.length);
+                    }
+                    else {
+                        index = 0;
+                    }
+                    console.log("Random index if multiple matches: " + index);
+
+                    $("#match-name").text(data[index].userName);
+                    $("#match-alias").text(data[index].irlName);
+                    $("#match-img").attr("src", data[index].userPhoto);
+
+                    // Show the modal with the best match
+                    $("#results-modal").modal("toggle");
+                });
+            } else {
+                alert("Fill out all fields!");
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,0 +1,16 @@
+body {
+    background-attachment: fixed;
+    background-size: 100%;
+    background-image: url(../../assets/images/background3.jpg);
+    background-position: top;
+    background-color: black;
+}
+
+#logoText {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h4 {
+    color: white;
+}
